@@ -6,18 +6,15 @@ Inspired by [Space Sodomy by StarikTenger](https://github.com/StarikTenger/Space
 
 ## Controls
 
-W - move forward
-S - move backwards
-A - rotate to left
-D - rotate to right
-Q - move to left
-E - move to right
-
-1 - activate first active module (Heat dissipator currently)
-
-Space - shoot
-
-Y - inflict self damage (for debug purposes)
+- W - move forward
+- S - move backwards
+- A - rotate to left
+- D - rotate to right
+- Q - move to left
+- E - move to right
+- 1 - activate first active module (Heat dissipator currently)
+- Space - shoot
+- Y - inflict self damage (for debug purposes)
 
 ## TODO list
 

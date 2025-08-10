@@ -13,7 +13,7 @@ Inspired by [Space Sodomy by StarikTenger](https://github.com/StarikTenger/Space
 - Q - move to left
 - E - move to right
 - 1 - activate first active module (Heat dissipator currently)
-- Space - shoot
+- Space - shoot fixed weapons
 - Y - inflict self damage (for debug purposes)
 
 ## TODO list

@@ -1,0 +1,88 @@
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://bpkag28ud2k43"]
+
+[ext_resource type="Texture2D" uid="uid://djcumd1qv6vrv" path="res://GUI/HealthBar/HealhBar.png" id="1_q08s2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sis5x"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 0, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl703"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 64, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7rab"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 128, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4kju"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 192, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51h1b"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 256, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0papi"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 320, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh1in"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 384, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44ftq"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 448, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cgsm"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 512, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0ief"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 576, 256, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41etv"]
+atlas = ExtResource("1_q08s2")
+region = Rect2(0, 640, 256, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sis5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rl703")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7rab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4kju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51h1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0papi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh1in")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44ftq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cgsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0ief")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41etv")
+}],
+"loop": true,
+"name": &"Stages",
+"speed": 5.0
+}]

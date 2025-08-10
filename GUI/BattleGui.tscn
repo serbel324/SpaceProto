@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtoo4djmdqhg2"]
+
+[ext_resource type="Texture2D" uid="uid://c3r8hdq8cy0g1" path="res://GUI/CameraRotationLock.png" id="1_57mkx"]
+[ext_resource type="Script" path="res://GUI/BattleGui.gd" id="2_jamgi"]
+[ext_resource type="PackedScene" uid="uid://dhegi1lbbvly3" path="res://GUI/HealthBar/HealthBar.tscn" id="3_o06ts"]
+[ext_resource type="PackedScene" uid="uid://0eq38275lq6g" path="res://GUI/ActiveModuleActivationButton/ActiveModuleActivationButton.tscn" id="4_2nv0m"]
+
+[node name="BattleGui" type="Control"]
+z_index = 100
+z_as_relative = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_jamgi")
+
+[node name="CameraRotationLockIcon" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 152.0
+offset_right = 84.0
+offset_bottom = 216.0
+texture = ExtResource("1_57mkx")
+
+[node name="HealthBar" parent="." instance=ExtResource("3_o06ts")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 129.0
+offset_top = 39.0
+offset_right = 193.0
+offset_bottom = 39.0
+
+[node name="PowerDistributionSlider" type="HSlider" parent="."]
+layout_mode = 2
+offset_left = 14.0
+offset_top = 74.0
+offset_right = 435.0
+offset_bottom = 90.0
+value = 50.0
+
+[node name="PowerOutputSlider" type="HSlider" parent="."]
+layout_mode = 2
+offset_left = 15.0
+offset_top = 91.0
+offset_right = 443.0
+offset_bottom = 107.0
+value = 100.0
+
+[node name="HeatBar" type="ProgressBar" parent="."]
+layout_mode = 2
+offset_left = 14.0
+offset_top = 117.0
+offset_right = 433.0
+offset_bottom = 144.0
+
+[node name="ActiveModuleActivationButton1" parent="." instance=ExtResource("4_2nv0m")]
+layout_mode = 1
+offset_left = 19.0
+offset_top = 222.0
+offset_right = 19.0
+offset_bottom = 222.0

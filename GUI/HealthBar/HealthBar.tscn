@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhegi1lbbvly3"]
+
+[ext_resource type="Script" path="res://GUI/HealthBar/HealthBar.gd" id="1_ei1yq"]
+[ext_resource type="SpriteFrames" uid="uid://bpkag28ud2k43" path="res://GUI/HealthBar/HealthBar.tres" id="1_k2dac"]
+[ext_resource type="LabelSettings" uid="uid://c0kxm2w58fd1w" path="res://GUI/HealthBar/HealtBarLabelSettings.tres" id="2_27n8j"]
+
+[node name="HealthBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ei1yq")
+
+[node name="Texture" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_k2dac")
+animation = &"Stages"
+speed_scale = 0.0
+flip_h = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -117.0
+offset_top = -13.0
+offset_right = -55.0
+offset_bottom = 10.0
+text = "
+"
+label_settings = ExtResource("2_27n8j")

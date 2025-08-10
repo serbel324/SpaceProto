@@ -1,0 +1,14 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwfnewfhgfyy7"]
+
+[ext_resource type="Script" path="res://Scenes/Spawner.gd" id="1_1u554"]
+[ext_resource type="PackedScene" uid="uid://b4fsb7o87jeyt" path="res://Ships/Ship.tscn" id="2_efhbf"]
+[ext_resource type="PackedScene" uid="uid://dw8xgs6s8johi" path="res://Control/PlayerController.tscn" id="2_fw1wp"]
+[ext_resource type="PackedScene" uid="uid://j2kyw6crn5be" path="res://Control/DumbAiController.tscn" id="3_q4ten"]
+[ext_resource type="PackedScene" uid="uid://byfmyn3su2qhi" path="res://Ships/Modules/Hulls/HullMoth/HullMoth.tscn" id="4_sdhyk"]
+
+[node name="Spawner" type="Node"]
+script = ExtResource("1_1u554")
+player_controller_scene = ExtResource("2_fw1wp")
+ai_dumb_controller_scene = ExtResource("3_q4ten")
+player_ship_hull_scene = ExtResource("4_sdhyk")
+ship_scene = ExtResource("2_efhbf")

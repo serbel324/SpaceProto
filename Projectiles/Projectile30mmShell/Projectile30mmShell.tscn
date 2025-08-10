@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpo5xrs0khogx"]
+
+[ext_resource type="Script" path="res://Projectiles/ProjectileBase.gd" id="1_3ed73"]
+[ext_resource type="Texture2D" uid="uid://dty74u8ywjht7" path="res://Projectiles/Projectile30mmShell/Projectile30mmShell.png" id="2_vir36"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_13um3"]
+radius = 6.0
+
+[node name="Projectile30MmShell" type="Area2D"]
+position = Vector2(0, -1)
+scale = Vector2(0.999429, 1)
+input_pickable = false
+script = ExtResource("1_3ed73")
+ttl_sec = 10.0
+damage_amount = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_13um3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vir36")

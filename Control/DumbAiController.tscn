@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://j2kyw6crn5be"]
+
+[ext_resource type="Script" path="res://Control/DumbAiController.gd" id="1_tviuk"]
+
+[node name="DumbAiController" type="Node"]
+script = ExtResource("1_tviuk")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dft0aqqroj74r"]
+
+[ext_resource type="Texture2D" uid="uid://cvfma50yo81ku" path="res://Background/Galaxy.png" id="1_vyvm1"]
+[ext_resource type="Texture2D" uid="uid://cj5qn6vkpgm7j" path="res://Background/Stars.png" id="2_dhbxp"]
+
+[node name="Background" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Galaxy" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.01, 0.01)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Galaxy"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_vyvm1")
+
+[node name="Stars" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Stars"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_dhbxp")

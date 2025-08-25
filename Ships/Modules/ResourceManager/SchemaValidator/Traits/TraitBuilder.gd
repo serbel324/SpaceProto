@@ -107,7 +107,7 @@ static func build_list_trait(name: String, data: Dictionary) -> Result:
     if typeof(item_data) != TYPE_DICTIONARY:
         return Result.new(Result.Status.ERROR, null, "Malformed Item type for list trait, Name# %s" % name)
 
-    var item_result: Result = build_trait(name, item_data)
+    var item_result: Result = build_trait(name, "Item", item_data)
     if !item_result.is_success():
         return Result.new(Result.Status.ERROR, null, "Bad itemItem type for list trait, Name# %s, ErrorReason# %s" % [name, item_result.get_error_reason()])
 
@@ -133,30 +133,33 @@ static func build_dictionary_trait(name: String, data: Dictionary) -> Result:
         var key_data: Variant = item_data["Key"]
         if typeof(key_data) != TYPE_STRING:
             return Result.new(Result.Status.ERROR, null, "Dictionary trait item's Key must be a string, Name# %s" % name)
+        var key_str: String = str(key_data)
 
         var value_data: String = item_data["Value"]
-        var value_result: Result = build_trait(name, value_data)
+        var value_result: Result = build_trait(name, key_str, value_data)
         if !value_result.is_success():
             return Result.new(Result.Status.ERROR, null, "Bad Value for dictionary trait, Name# %s, ErrorReason# %s" % [name, value_result.get_error_reason()])
 
-        traits[str(key_data)] = value_result.get_value()
+        traits[key_str] = value_result.get_value()
 
     return Result.new(Result.Status.SUCCESS, DictionaryTrait.new(name, traits))
 
 
-static func build_trait(parent_name: String, data: Variant) -> Result:
+static func build_trait(parent_name: String, name: Variant, data: Variant) -> Result:
     if typeof(data) != TYPE_DICTIONARY:
         return Result.new(Result.Status.ERROR, null, "Malformed trait data, ParentName# %s" % parent_name)
 
-    if !data.has("name"):
-        return Result.new(Result.Status.ERROR, null, "Unnamed trait, ParentName# %s" % parent_name)
+    if name == null:
+        if !data.has("name"):
+            name = "<unnamed>"
+        else:
+            var name_data: Variant = data["name"]
+            if typeof(name_data) != TYPE_STRING:
+                return Result.new(Result.Status.ERROR, null, "Trait name must be a string, ParentName# %s" % parent_name)
+            name = str(name_data)
 
-    var name: String = data["name"]
-    if typeof(name) != TYPE_STRING:
-        return Result.new(Result.Status.ERROR, null, "Trait name must be a string, ParentName# %s" % parent_name)
-
-    if !data.has("type"):
-        return Result.new(Result.Status.ERROR, null, "Trait type is required, ParentName# %s" % parent_name)
+        if !data.has("type"):
+            return Result.new(Result.Status.ERROR, null, "Trait type is required, ParentName# %s" % parent_name)
 
     var type_value: String = data["type"]
     if typeof(type_value) != TYPE_STRING:

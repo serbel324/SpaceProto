@@ -1,8 +1,0 @@
-[gd_resource type="JSON" format=3 uid="uid://bfjxcv8bm3g4c"]
-
-[resource]
-data = {
-"PowerPlants": [{
-"__SCHEMA__": {}
-}]
-}

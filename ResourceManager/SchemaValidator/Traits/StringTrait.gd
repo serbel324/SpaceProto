@@ -10,12 +10,12 @@ func _init(name_: String, default_value_: Variant = null) -> void:
 func sift(value: Variant) -> Result:
     if value == null:
         if default_value == null:
-            return Result.new(Result.Status.ERROR, null, "Value of non-optional string is null, #Name" % name)
+            return Result.error("Value of non-optional string is null, Name# %s" % name)
         else:
-            return Result.new(Result.Status.SUCCESS, default_value)
+            return Result.success(default_value)
 
-    if typeof(value) != TYPE_STRING:
-        return Result.new(Result.Status.ERROR, null, "Malformed input for string, Name# %s" % name)
-
-    var str_value: String = value
-    return Result.new(Result.Status.SUCCESS, str_value)
+    var str_conversion: Result = Converters.variant_to_string(value)
+    if !str_conversion.is_success():
+        return Result.error(str_conversion.get_error_reason())
+    var str_value: String = str_conversion.get_value()
+    return Result.success(str_value)

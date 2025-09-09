@@ -1,0 +1,19 @@
+{
+    "PowerPlants": [
+        {
+            "Name": "PowerPlant1",
+            "PowerGeneration": 100,
+            "HeatGeneration": 100
+        },
+        {
+            "Name": "PowerPlant2",
+            "PowerGeneration": 150,
+            "HeatGeneration": 200
+        },
+        {
+            "PowerGeneration": 1000,
+            "HeatGeneration": 200000
+        }
+    ],
+    "Engines": []
+}

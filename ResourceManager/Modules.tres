@@ -1,0 +1,18 @@
+[gd_resource type="JSON" format=3 uid="uid://bfjxcv8bm3g4c"]
+
+[resource]
+data = {
+"Engines": [],
+"PowerPlants": [{
+"HeatGeneration": 100,
+"Name": "PowerPlant1",
+"PowerGeneration": 100
+}, {
+"HeatGeneration": 200,
+"Name": "PowerPlant2",
+"PowerGeneration": 150
+}, {
+"HeatGeneration": 200000,
+"PowerGeneration": 1000
+}]
+}

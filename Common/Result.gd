@@ -27,3 +27,9 @@ func get_value() -> Variant:
 func get_error_reason() -> String:
     assert(status == Status.ERROR, "Attempted to get error reason from a successful result")
     return error_reason
+
+static func success(value_: Variant) -> Result:
+    return Result.new(Status.SUCCESS, value_)
+
+static func error(error_reason_: String) -> Result:
+    return Result.new(Status.ERROR, null, error_reason_)

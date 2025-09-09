@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bu4hloj8puj4t"]
+[gd_scene load_steps=9 format=3 uid="uid://bu4hloj8puj4t"]
 
 [ext_resource type="PackedScene" uid="uid://bwfnewfhgfyy7" path="res://Scenes/Spawner.tscn" id="1_yco0f"]
 [ext_resource type="PackedScene" uid="uid://dtoo4djmdqhg2" path="res://GUI/BattleGui.tscn" id="2_ccnhk"]
 [ext_resource type="PackedScene" uid="uid://dft0aqqroj74r" path="res://Background/Background.tscn" id="5_3rkf6"]
 [ext_resource type="TileSet" uid="uid://buyb1gsgigpyi" path="res://Map/MapTiles.tres" id="5_f172w"]
 [ext_resource type="Script" path="res://Control/CameraController.gd" id="6_4emmq"]
+[ext_resource type="PackedScene" uid="uid://cik3lloni2w8i" path="res://ResourceManager/ResourceManager.tscn" id="6_ksrxy"]
+[ext_resource type="JSON" uid="uid://dk3nyp65rwvj3" path="res://ResourceManager/ModuleSchema.tres" id="7_68epx"]
+[ext_resource type="JSON" uid="uid://bfjxcv8bm3g4c" path="res://ResourceManager/Modules.tres" id="8_vipma"]
 
 [node name="MainScene" type="Node2D"]
 
@@ -40,3 +43,7 @@ offset_bottom = 29.0
 
 [node name="Background" parent="." instance=ExtResource("5_3rkf6")]
 z_index = -100
+
+[node name="ResourceManager" parent="." instance=ExtResource("6_ksrxy")]
+module_schema = ExtResource("7_68epx")
+modules_data = ExtResource("8_vipma")
